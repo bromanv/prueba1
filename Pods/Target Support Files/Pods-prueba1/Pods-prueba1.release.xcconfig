@@ -1,0 +1,6 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/HCSStarRatingView" "${PODS_ROOT}/Headers/Public/MZAppearance" "${PODS_ROOT}/Headers/Public/MZFormSheetController" "${PODS_ROOT}/Headers/Public/MagicalRecord" "${PODS_ROOT}/Headers/Public/MagicalRecord/MagicalRecord"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/HCSStarRatingView" -isystem "${PODS_ROOT}/Headers/Public/MZAppearance" -isystem "${PODS_ROOT}/Headers/Public/MZFormSheetController" -isystem "${PODS_ROOT}/Headers/Public/MagicalRecord" -isystem "${PODS_ROOT}/Headers/Public/MagicalRecord/MagicalRecord"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"Pods-prueba1-HCSStarRatingView" -l"Pods-prueba1-MZAppearance" -l"Pods-prueba1-MZFormSheetController" -l"Pods-prueba1-MagicalRecord" -framework "Accelerate" -framework "CoreData" -framework "QuartzCore"
+OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
+PODS_ROOT = ${SRCROOT}/Pods

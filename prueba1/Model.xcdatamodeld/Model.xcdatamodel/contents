@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14D136" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Calificaciones" representedClassName="Calificaciones" syncable="YES">
+        <attribute name="calificacion" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="fechaCreacion" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="habilitado" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="pelicula" maxCount="1" deletionRule="Nullify" destinationEntity="Peliculas" inverseName="calificaciones" inverseEntity="Peliculas" syncable="YES"/>
+    </entity>
+    <entity name="Categorias" representedClassName="Categorias" syncable="YES">
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="peliculas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Peliculas" inverseName="categoria" inverseEntity="Peliculas" syncable="YES"/>
+    </entity>
+    <entity name="Peliculas" representedClassName="Peliculas" syncable="YES">
+        <attribute name="fechaCreacion" attributeType="Date" indexed="YES" syncable="YES"/>
+        <attribute name="nombre" attributeType="String" syncable="YES"/>
+        <relationship name="calificaciones" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Calificaciones" inverseName="pelicula" inverseEntity="Calificaciones" syncable="YES"/>
+        <relationship name="categoria" maxCount="1" deletionRule="No Action" destinationEntity="Categorias" inverseName="peliculas" inverseEntity="Categorias" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Peliculas" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="Calificaciones" positionX="81" positionY="-249" width="128" height="103"/>
+        <element name="Categorias" positionX="144" positionY="-75" width="128" height="73"/>
+    </elements>
+</model>
